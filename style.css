@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(20deg,#9ae9b2, #ebeaea);
+    position:absolute;
+    z-index: -5;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 20px;
+    
+}
+.calculatrice {
+    position: relative;
+    width: max-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    max-height: 800px; 
+    box-shadow: 4px 2px 16px 10px rgba(246, 255, 174, 0.571);
+   
+}
+.ScreenResult{
+    width: 89%;
+    background-color: rgba(255, 255, 255, 0.645);
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 30px;
+    font-family: 'Titan One', sans-serif;
+    border-radius: 20px; 
+    padding-top: 7%;
+    padding-left:5% ;
+    font-size: large;
+   
+}
+
+.buttonscontainer{
+    height: auto;
+    min-height: 0;
+    max-width: 100%;
+    flex-grow: 1;
+    width:500px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    padding: 20px;
+    font-family: 'Titan One', sans-serif;
+    overflow: hidden;
+   
+}
+    
+#clear{
+    background-color: rgb(218, 197, 75);
+    height: 100%;
+    width:150px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-family: 'Titan One', sans-serif;
+    font-size: large;
+    
+}
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(4, 1fr); 
+    grid-row: 2/6;
+    grid-column: 1/4;
+    padding: 20px;
+    height: max-content;
+    max-width: 350px;
+    min-height: 100%;
+    gap: 10px;
+    background-color: rgba(160, 81, 45, 0);
+    border-radius: 20px;
+}
+.numbers button{
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    font-size: 1.8rem;
+}
+button{
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: 'Titan One', sans-serif;
+    font-size: 1.2rem;
+    
+}
+.calcul:hover:not(.operator){
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+.operator:not(#clear,#result){
+    text-align: center;
+    background-color: #72cc6f;
+    height: 90px;
+    width: 95px;
+}
+#result{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 50.8%;
+    top: 81%;
+}
+#result:hover{
+    background-color: #72cc6f;
+}
